@@ -4,14 +4,12 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|password|string|null: false, unique: true|
-|email|string|null: false, unique: true|
 |name|string|null: false, unique: true, index: true|
 
 ### Association
 - has_many :messages
 - has_many :members
-- has/many :groups, through: :members
+- has_many :groups, through: :members
 
 ## groupsテーブル
 
@@ -31,7 +29,7 @@
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
-|body|varchar||
+|body|text||
 |image|string||
 
 ### Association
