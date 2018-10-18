@@ -1,17 +1,15 @@
-@import "./reset";
 @import "font-awesome";
+@import "./reset";
+@import "./config/variables";
+@import "./mixin/clearfix";
+@import "./modules/btm";
+@import "./modules/head";
+@import "./modules/side";
+@import "./modules/top";
+
+
 
 .wrapper{
-  .sidebar {
-    .side-header {
-      background: #253141;
-      width: 300px;
-      height:110px;
-      font:bold/16px;
-      color: #FFFFFF;
-
-
-
-    }
-  }
+  margin: 0;
+  width: 100%;
 }

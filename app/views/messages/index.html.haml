@@ -2,11 +2,12 @@
 .wrapper
   .sidebar
     .side-header
-      .side-main-header
-        %p.side-main-header__name name
-        %ul.menu
-          %li.menu__icon new-group
-          %li.menu__icon2 new-group
+      %p.side-header__name name
+      %ul.menu
+        %li.menu__icon
+          = fa_icon 'gear'
+        %li.menu__icon2
+          = fa_icon 'edit'
     .side-main
       .group
         %p.group__title niku
@@ -26,22 +27,23 @@
         %p.main-head-left__name beef
         %ul.group-name
           %li.group-name__member sova
-      .edit
+      .edit  Edit
     .messages
       .message
-        .data
-          %p.data__user-name daisuke
-          %p.data__date today
-          %p.data__message hello
-          %img.data__image image
+        .date
+          %p.date__user-name daisuke
+          %p.date__date today
+        %p.message__text hello
+        %img.message__image image
     .main-hooter
       %form
         .input-box
-          %input.message-text{type: "text_field"}
+          %input.message-text{type: "text_field", placeholder: "type a message"}
           %label
-            %input.message-text{type: "file"}
-            %i aaaaaa
-          %input.send{type: "submit"}
+            %input.message-file{type: "file"}
+            %i.input-box__image
+              = fa_icon 'image'
+      %input.send{type: "submit", value: "Send"}
 
 
 
