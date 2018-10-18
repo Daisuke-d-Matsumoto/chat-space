@@ -1,0 +1,39 @@
+.main-hooter {
+  box-sizing: border-box;
+  background: #DDD;
+  height: 90px;
+  padding: 20px 50px 20px 40px;
+    .input-box {
+      .message-text {
+        border: none;
+        box-sizing: border-box;
+        float: left;
+        height: 50px;
+        padding: 0 10px;
+        width: calc(100% - 150px);
+      }
+      label {
+        .message-file {
+          display: none;
+        }
+        background: #fff;
+        float: left;
+        padding-right: 10px;
+        height: 50px;
+        font-size: 20px;
+        line-height: 50px;
+      }
+      &__image {
+      }
+    }
+    .send {
+      background-color: #38AEF0;
+      border: none;
+      color: #fff;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
+}

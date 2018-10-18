@@ -1,0 +1,50 @@
+!!!
+.wrapper
+  .sidebar
+    .side-header
+      %p.side-header__name name
+      %ul.menu
+        %li.menu__icon
+          = fa_icon 'gear'
+        %li.menu__icon2
+          = fa_icon 'edit'
+    .side-main
+      .group
+        %p.group__title niku
+        %p.group__message sakana
+      .group
+        %p.group__title taiyaki
+        %p.group__message udon
+      .group
+        %p.group__title tuke
+        %p.group__message men
+      .group
+        %p.group__title yaki
+        %p.group__message tori
+  .mainbar
+    .main-head
+      .main-head-left
+        %p.main-head-left__name beef
+        %ul.group-name
+          %li.group-name__member sova
+      .edit  Edit
+    .messages
+      .message
+        .date
+          %p.date__user-name daisuke
+          %p.date__date today
+        %p.message__text hello
+        %img.message__image image
+    .main-hooter
+      %form
+        .input-box
+          %input.message-text{type: "text_field", placeholder: "type a message"}
+          %label
+            %input.message-file{type: "file"}
+            %i.input-box__image
+              = fa_icon 'image'
+      %input.send{type: "submit", value: "Send"}
+
+
+
+
