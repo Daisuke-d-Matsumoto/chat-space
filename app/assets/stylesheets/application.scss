@@ -1,15 +1,18 @@
 @import "font-awesome";
 @import "./reset";
+@import "./config/colors";
 @import "./config/variables";
+@import "./modules/flash";
 @import "./mixin/clearfix";
 @import "./modules/btm";
 @import "./modules/head";
 @import "./modules/side";
 @import "./modules/top";
+@import "./modules/user";
+@import "./modules/group";
 
 
-
-.wrapper{
+.wrapper {
   margin: 0;
   width: 100%;
 }
