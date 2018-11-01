@@ -3,10 +3,12 @@
 .mainbar
   .main-head
     .main-head-left
-      %p.main-head-left__name beef
+      %p.main-head-left__name ddd
       %ul.group-name
-        %li.group-name__member sova
-    .edit  Edit
+        %li.group-name__member
+          = current_user.name
+    .edit
+      = link_to "Edit", edit_group_path(@group.id), class: 'btn'
   .messages
     = render @messages
   .input-box
@@ -17,6 +19,5 @@
           = fa_icon 'image', class: "message-icon"
           = f.file_field :image, class: "message-file"
       = f.submit "Send", class: "send"
-
 
 
