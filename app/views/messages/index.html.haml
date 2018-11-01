@@ -7,7 +7,8 @@
       %ul.group-name
         %li.group-name__member
           = current_user.name
-    .edit  Edit
+    .edit
+      = link_to "Edit", "/groups/#{params[:group_id]}/edit",class: 'btn'
   .messages
     = render @messages
   .input-box
@@ -18,6 +19,5 @@
           = fa_icon 'image', class: "message-icon"
           = f.file_field :image, class: "message-file"
       = f.submit "Send", class: "send"
-
 
 
