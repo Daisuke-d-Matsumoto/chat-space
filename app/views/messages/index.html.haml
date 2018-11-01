@@ -8,7 +8,7 @@
         %li.group-name__member
           = current_user.name
     .edit
-      = link_to "Edit", "/groups/#{params[:group_id]}/edit",class: 'btn'
+      = link_to "Edit", edit_group_path(@group.id), class: 'btn'
   .messages
     = render @messages
   .input-box
