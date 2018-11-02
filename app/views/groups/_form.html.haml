@@ -22,11 +22,10 @@
       %label.chat-group-form__label{for: "chat_group_チャットメンバー"} チャットメンバー
     .chat-group-form__field--right
       .chat-group-users.js-add-user
-  #chat-group-users
-    #chat-group-user-22.chat-group-user.clearfix
-      %input{name: "chat_group[user_ids][]", type: "hidden", value: "#{user.id}" }/
-      %p.chat-group-user__name
-
+        / .chat-group-user.js-chat-member.clearfix{id: "#{current_user.id}"}
+        /   %input{name: "chat_group[user_ids][]", type: "hidden", value: "#{current_user.id}" }/
+        /   %p.chat-group-user__name
+        /   %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除
 
   .chat-group-form__field
     .chat-group-form__field--left
