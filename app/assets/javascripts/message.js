@@ -1,11 +1,11 @@
 $(function() {
   function buildHTML(message){
     if (message.image.url) {
-      var image = `<img src="${message.image.url}" class="message__image">`;
+      var image = `<img src="${message.image.url}" class="lower-message__image">`;
     } else {
       var image = ``
     }
-    var html = `<div class="message">
+    var html = `<div class="message" data-message-id="${message.id}">
                   <div class="date">
                     <p class="date__user-name">
                       ${ message.user_name }
@@ -47,4 +47,30 @@ $(function() {
       $('.send').prop('disabled', false)
     })
   })
+
+  var interval = setInterval(function() {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+      var last_id = $('.message:last').data('message-id');
+      $.ajax({
+        url: location.href,
+        data: { id: last_id },
+        dataType: 'json',
+      })
+      .done(function(json) {
+        // var insertHTML = '';
+        console.log(json);
+        if (json!= null){
+          json.forEach(function(message) {
+            $('.message').append(buildHTML(message));
+          });
+          $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight
+          }, 'fast');
+        }
+      })
+      .fail(function(json) {
+        alert('失敗しました');
+      });
+    } else {
+       clearInterval(interval);
+    }}, 5000);
 });
