@@ -37,7 +37,7 @@ $(function() {
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html)
-      $('.message-text').val('')
+      $('.message-file, .message-text').val('');
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 1500,'swing');
     })
     .fail(function() {
