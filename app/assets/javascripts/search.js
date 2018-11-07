@@ -45,7 +45,7 @@ $(document).on('turbolinks:load', function() {
       }
     })
   });
-  $(document).on('click', ".chat-group-user__btn--add", function() {
+  $('#user-search-result').on('click', ".chat-group-user__btn--add", function() {
     //追加したhtml内でデータとして追加したidとnameを取得
     var id = $(this).attr('data-user-id');
     var name = $(this).attr('data-user-name');
@@ -55,7 +55,7 @@ $(document).on('turbolinks:load', function() {
     var html = changeUser(name,id);
     $('.js-add-user').append(html);
   })
-  $(document).on('click', ".chat-group-user__btn--remove", function() {
+  $('.chat-group-users').on('click', ".chat-group-user__btn--remove", function() {
     $(this).parent().remove();
   })
 
