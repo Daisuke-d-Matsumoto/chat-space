@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function() {
+$(function() {
   function buildHTML(message){
     if (message.image.url) {
       var image = `<img src="${message.image.url}" class="lower-message__image">`;
@@ -57,11 +57,9 @@ $(document).on('turbolinks:load', function() {
         dataType: 'json',
       })
       .done(function(json) {
-        // var insertHTML = '';
-        console.log(json);
         if (json!= null){
           json.forEach(function(message) {
-            $('.message').append(buildHTML(message));
+            $('.messages').append(buildHTML(message));
           });
           $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight
           }, 'fast');
@@ -72,5 +70,5 @@ $(document).on('turbolinks:load', function() {
       });
     } else {
        clearInterval(interval);
-    }}, 5000);
+    }},5000);
 });
