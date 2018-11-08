@@ -22,12 +22,12 @@
       %label.chat-group-form__label{for: "chat_group_チャットメンバー"} チャットメンバー
     .chat-group-form__field--right
       .chat-group-users.js-add-user
-        / .chat-group-user.js-chat-member.clearfix{id: "#{current_user.id}"}
-        /   %input{name: "chat_group[user_ids][]", type: "hidden", value: "#{current_user.id}" }/
-        /   %p.chat-group-user__name
-        /   %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除
+        #chat-group-user-10262.chat-group-user.clearfix.js-chat-member
+          %p.chat-group-user__name
+            = current_user.name
+        = render partial: 'groups/user', collection: @group_users
 
   .chat-group-form__field
     .chat-group-form__field--left
     .chat-group-form__field--right
-      = f.submit class: 'chat-group-form__action-btn'
+      = f.submit "Save", class: 'chat-group-form__action-btn'

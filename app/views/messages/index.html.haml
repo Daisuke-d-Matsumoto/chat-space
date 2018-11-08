@@ -3,7 +3,8 @@
 .mainbar
   .main-head
     .main-head-left
-      %p.main-head-left__name ddd
+      %p.main-head-left__name
+        = @group.name
       %ul.group-name
         %li.group-name__member
           = current_user.name
