@@ -3,11 +3,16 @@
 .mainbar
   .main-head
     .main-head-left
-      %p.main-head-left__name
+      .main-head-left__name
         = @group.name
-      %ul.group-name
-        %li.group-name__member
-          = current_user.name
+      %p Members :
+      - @group.users.each do |user|
+        %span
+          = user.name
+
+
+
+
     .edit
       = link_to "Edit", edit_group_path(@group.id), class: 'btn'
   .messages
