@@ -10,6 +10,7 @@
       = f.label :name, class: 'chat-group-form__label'
     .chat-group-form__field--right
       = f.text_field :name, class: 'chat__group_name chat-group-form__input', placeholder: 'グループ名を入力してください'
+
   .chat-group-form__field
     .chat-group-form__field--left
       %label.chat-group-form__label{for: "chat_group_チャットメンバーを追加"} チャットメンバーを追加
@@ -24,10 +25,10 @@
       .chat-group-users.js-add-user
         #chat-group-user-10262.chat-group-user.clearfix.js-chat-member
           %p.chat-group-user__name
-            = current_user.name
-        = render partial: 'groups/user', collection: @group_users
+        #chat-group-users
+          = render partial: 'groups/user', collection: @group_users
 
   .chat-group-form__field
     .chat-group-form__field--left
     .chat-group-form__field--right
-      = f.submit "Save", class: 'chat-group-form__action-btn'
+      = f.submit "更新する", class: 'chat-group-form__action-btn'

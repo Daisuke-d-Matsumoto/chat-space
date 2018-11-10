@@ -4,22 +4,27 @@
   margin-left: 300px;
   float: left;
   margin: 0;
+
   .main-head {
     box-sizing: border-box;
     height: 100px;
     padding: 0 40px;
+
     .main-head-left {
       margin-top: 35px;
       float: left;
+
       &__name {
         font-size: 20px;
       }
+
       p {
         color: #999;
         font-size: 12px;
         margin-top: 15px;
         float: left;
       }
+
       span {
         color: #999;
         font-size: 12px;
@@ -28,6 +33,7 @@
         padding-right: 5px;
       }
     }
+
     .edit {
       border: 1px solid #38AEF0;
       color: #38AEF0;
@@ -36,6 +42,7 @@
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
+
       .btn {
         text-decoration: none;
         color: #38AEF0;

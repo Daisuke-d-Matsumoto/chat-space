@@ -4,6 +4,7 @@ width:300px;
 height: 790px;
 float: left;
 margin: 0;
+
   .side-header {
     height: 100px;
     padding: 0 20px;
@@ -11,20 +12,25 @@ margin: 0;
     font-weight: bold;
     color: #FFF;
     line-height: 100px;
+
     &__name {
       display: inline-block;
       float: left;
       }
+
     .menu {
       display: inline-block;
       float: right;
+
       &__icon {
         float: right;
         display: inline-block;
       }
+
       .fa {
         color: #FFF;
       }
+
       &__icon2 {
         float: right;
         display: inline-block;
@@ -32,18 +38,22 @@ margin: 0;
       }
     }
   }
+
   .side-main {
     background: #2f3e51;
     box-sizing: border-box;
     height: calc(100vh - 100px);
     padding: 0 20px;
+
     .group {
         box-sizing: border-box;
         padding: 20px 0 40px;
+
       &__title {
         font-size: 15px;
         color: #FFF;
       }
+
       &__message {
         font-size: 11px;
         color: #FFF;

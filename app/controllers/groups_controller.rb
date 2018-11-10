@@ -22,7 +22,7 @@ class GroupsController < ApplicationController
   def edit
     @users = User.all
     @group_users = @group.users
-    @group_users.delete(current_user)
+    # @group_users.delete(current_user)
   end
 
   def update

@@ -16,15 +16,17 @@ $(document).on('turbolinks:load', function() {
                   <p class='chat-group-user__name'>${ name }</p>
                   <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
                 </div>`
-    return html;
+  return html;
   }
   function appendNoUser(user) {
     var html = `<div class="chat-group-user clearfix">${ user }</div>`
     search_list.append(html);
   }
 
-  $("#user-search-field").on("keyup", function() {
+  $("#user-search-field").on("keyup", function(e) {
+    e.preventDefault();
     var input = $("#user-search-field").val();
+    console.log('success');
 
     $.ajax({
     type: 'GET',
@@ -33,8 +35,10 @@ $(document).on('turbolinks:load', function() {
     data: { keyword: input }
     })
     .done(function(users) {
+      console.log('success!');
       search_list.empty();
       if (users.length !== 0) {
+        console.log('success!!')
         users.forEach(function(user) {
           var html = appendUser(user);
           search_list.append(html);
@@ -53,9 +57,10 @@ $(document).on('turbolinks:load', function() {
     $(this).parent().remove();
     //取得したユーザーの情報を引数に渡してHTMLを追加
     var html = changeUser(name,id);
-    $('.js-add-user').append(html);
+    $('#chat-group-users').append(html);
   })
-  $('.chat-group-users').on('click', ".chat-group-user__btn--remove", function() {
+  $('#chat-group-users').on('click', ".chat-group-user__btn--remove", function() {
+    console.log("test");
     $(this).parent().remove();
   })
 

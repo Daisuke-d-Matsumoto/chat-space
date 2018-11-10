@@ -4,6 +4,7 @@
       background: #DDD;
       height: 90px;
       padding: 20px 50px 20px 40px;
+
       .message-text {
         border: none;
         box-sizing: border-box;
@@ -12,6 +13,7 @@
         padding: 0 10px;
         width: calc(100% - 150px);
       }
+
       .input-box__mask {
         background: #fff;
         float: left;
@@ -19,6 +21,7 @@
         height: 50px;
         font-size: 20px;
         line-height: 50px;
+
         .message-file {
           display: none;
 
@@ -30,12 +33,7 @@
           }
         }
       }
-        //background: #fff;
-        //float: left;
-        //padding-right: 10px;
-        //height: 50px;
-        //font-size: 20px;
-        //line-height: 50px;
+
       .send {
         background-color: #38AEF0;
         border: none;
