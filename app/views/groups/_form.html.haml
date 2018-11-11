@@ -26,6 +26,10 @@
         #chat-group-user-10262.chat-group-user.clearfix.js-chat-member
           %p.chat-group-user__name
         #chat-group-users
+          .chat-group-user.clearfix.js-chat-member{id: "${ user.id }"}
+            %p.chat-group-user__name
+              = current_user.name
+              = hidden_field_tag('group[user_ids][]', current_user.id)
           = render partial: 'groups/user', collection: @group_users
 
   .chat-group-form__field

@@ -1,5 +1,4 @@
 .chat-group-user.clearfix.js-chat-member{id: "${ user.id }"}
-  = hidden_field_tag('group[user_ids][]', current_user.id)
   %p.chat-group-user__name
     = user.name
     = hidden_field_tag('group[user_ids][]', user.id)
