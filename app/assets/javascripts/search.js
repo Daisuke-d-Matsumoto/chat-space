@@ -2,12 +2,6 @@ $(document).on('turbolinks:load', function() {
 
   var search_list = $("#user-search-result");
 
-  var userId = [];
-
-  $(document).ready(function() {
-    userId.length = 0;
-  })
-
   function appendUser(user) {
     var html = `<div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">${ user.name }</p>
@@ -22,7 +16,6 @@ $(document).on('turbolinks:load', function() {
                   <p class='chat-group-user__name'>${ name }</p>
                   <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
                 </div>`
-    userId.push(id);
   return html;
   }
   function appendNoUser(user) {
@@ -40,8 +33,7 @@ $(document).on('turbolinks:load', function() {
     url: '/users',
     dataType: 'json',
     data: { keyword: input,
-            group_id: group_id,
-            id: userId }
+            group_id: group_id },
     })
     .done(function(users) {
       search_list.empty();
