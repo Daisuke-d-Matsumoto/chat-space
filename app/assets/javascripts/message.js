@@ -57,7 +57,7 @@ $(document).on('turbolinks:load', function() {
         dataType: 'json',
       })
       .done(function(json) {
-        if (json!= null){
+        if (json.length != 0){
           json.forEach(function(message) {
             $('.messages').append(buildHTML(message));
           });
